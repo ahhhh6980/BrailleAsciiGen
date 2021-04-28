@@ -92,14 +92,9 @@ def main():
 
 if __name__ == '__main__':
     
-    try:
-        data = main()
-        with open((input("Enter filename without extension | Default: output >> ") or "output").split(".")[0] + ".txt", "w", encoding='utf8') as f:
-            f.write(data)
-    except Error as e:
-        print( 'Error!', e)
-        print( 'Press enter to exit (and fix the problem)')
-        raw_input()
+    data = main()
+    with open((input("Enter filename without extension | Default: output >> ") or "output").split(".")[0] + ".txt", "w", encoding='utf8') as f:
+        f.write(data)
     input("Press ENTER to exit")
 
 """
